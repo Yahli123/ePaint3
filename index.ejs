@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ePaint - Entrance</title>
+
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="/accordion.css">
+
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="bg-cyan-500 dark:bg-gray-900 h-28 fixed w-full z-20 top-0 start-0">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 mt-5">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse text-3xl font-bold">
+        <i class="fas fa-paintbrush text-3xl"></i> ePaint
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <a href="/login"><button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button></a>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 bg-transparent">
+        <li>
+          <a href="#" class="block py-2 px-3 text-white rounded md:bg-transparent md:hover:underline md:p-0 md:dark:text-blue-500 text-xl" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#About" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:underline md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-xl">About</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:underline md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-xl">Demo</a>
+        </li>
+        <li>
+          <a href="#FAQ" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:underline md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-xl">FAQ</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Main content -->
+  <div class="max-w-screen-xl h-screen mx-auto mb-0 px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-40">
+      <!-- Left Section -->
+      <div>
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Welcome to ePaint - Your Creative Hub!</h1>
+        <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">Express your artistic side and connect with fellow painters and art enthusiasts on ePaint. Whether you're a professional artist or just starting your creative journey, our platform offers a vibrant community and powerful tools to showcase your work.</p>
+        <a href="/login"><button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get Started</button></a>
+      </div>
+      <!-- Right Section (Image or Video Placeholder) -->
+      <div class="rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700 h-80 shadow-lg">
+        <!-- Placeholder for an image or video -->
+        <img src="https://images.pexels.com/photos/587958/pexels-photo-587958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Painting on ePaint" class="w-full h-auto object-full">
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="mt-12">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Why Choose ePaint?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Feature 1 -->
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-all duration-300 hover:scale-105">
+          <i class="fas fa-paint-brush text-4xl text-blue-700 dark:text-blue-400 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Creative Community</h3>
+          <p class="text-gray-700 dark:text-gray-300">Join a diverse community of artists and enthusiasts. Share your work, get feedback, and collaborate on projects.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-all duration-300 hover:scale-105">
+          <i class="fas fa-tools text-4xl text-blue-700 dark:text-blue-400 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Powerful Tools</h3>
+          <p class="text-gray-700 dark:text-gray-300">Access a range of tools designed for artists. From digital painting to portfolio management, we've got you covered.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-all duration-300 hover:scale-105">
+          <i class="fas fa-users text-4xl text-blue-700 dark:text-blue-400 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Community Events</h3>
+          <p class="text-gray-700 dark:text-gray-300">Participate in live workshops, contests, and exhibitions. Connect with artists globally and expand your horizons.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section class="bg-cyan-700 dark:bg-cyan-900 py-20 md:py-24 h-screen" id="About">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-full items-center mt-40">
+        <!-- Left Section (Image or Video Placeholder) -->
+        <div class="rounded-lg overflow-hidden bg-gray-900 dark:bg-gray-600 h-[600px] shadow-lg md:order-1">
+          <!-- Placeholder for an image or video -->
+          <img src="https://images.unsplash.com/photo-1606355555437-59e0b3f0a703?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFydGlzdCUyMHNha3VyYXxlbnwwfHwwfHx8MA%3D%3D" alt="Painting on ePaint" class="w-full h-auto object-cover object-center">
+        </div>
+        <!-- Right Section (Text) -->
+        <div class="flex flex-col justify-center md:order-2">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 text-center">About ePaint</h2>
+          <p class="text-lg md:text-xl text-gray-200 dark:text-gray-400 mb-8">ePaint is a vibrant community dedicated to artists of all levels. We believe in fostering creativity, collaboration, and growth.</p>
+          <p class="text-lg md:text-xl text-gray-200 dark:text-gray-400 mb-8">Our platform offers a range of features designed to empower artists, showcasing your work on a specialized virtual canvas.</p>
+          <p class="text-lg md:text-xl text-gray-200 dark:text-gray-400 mb-8">Whether you're a professional artist or just starting your creative journey, our platform offers an amazing community and a powerful canvas tool to showcase your work.</p>
+        
+          <p class="text-lg md:text-xl text-gray-200 dark:text-gray-400 mb-8">Join us on ePaint and explore a world of artistry!</p>
+          <a href="/login" class="inline-block text-lg md:text-xl text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg py-3 px-6 md:py-4 md:px-8 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Canvas Demo Section -->
+  <section class="bg-gray-100 dark:bg-gray-800 py-20 md:py-24">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-10 text-center">Try Out Our Canvas Demo</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <!-- Canvas -->
+        <div>
+          <canvas id="paintCanvas" class="w-full max-w-lg h-96 mx-auto border border-gray-300 shadow-md"></canvas>
+        </div>
+        <!-- Controls -->
+        <div id="controls" class="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg shadow-lg text-center space-y-4">
+          <div class="flex justify-center space-x-4">
+            <div class="tooltip">
+              <button class="color-button bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 text-white font-medium rounded-lg py-2 px-4" onclick="changeColor('#f50000')"></button>
+              <span class="tooltiptext">Red</span>
+            </div>
+            <div class="tooltip">
+              <button class="color-button bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 text-white font-medium rounded-lg py-2 px-4" onclick="changeColor('#00f300')"></button>
+              <span class="tooltiptext">Green</span>
+            </div>
+            <div class="tooltip">
+              <button class="color-button bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 text-white font-medium rounded-lg py-2 px-4" onclick="changeColor('#0000f4')"></button>
+              <span class="tooltiptext">Blue</span>
+            </div>
+            <div class="tooltip">
+              <button class="color-button bg-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-white text-white font-medium rounded-lg py-2 px-4" onclick="changeColor('#000000')"></button>
+              <span class="tooltiptext">Black</span>
+            </div>
+            <!-- Add more color buttons here if needed -->
+          </div>
+          <button class="bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 text-white font-medium rounded-lg py-3 px-6 text-xl clearBtn">Clear Canvas</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- FAQ section -->
+  <div class=" bg-white m-0" id="FAQ">
+    <div class="mt-40 mb-0">
+      <h1 class="font-bold text-4xl text-center mb-20">Frequently Asked Questions</h1>
+      <ul class="accordion  js-accordion" data-animation="on" data-multi-items="on" class="flex flex-col">
+
+        <li class="accordion__item accordion__item--is-open js-accordion__item">
+          <button class="accordion__header py-3 lg:py-5 px-5 lg:px-8 js-tab-focus" type="button">
+            <span class="text-lg lg:text-2xl font-semibold">What are the benefits of using ePaint?</span>
+
+            <svg class="icon h-[20px] w-[20px] inline-block text-inherit fill-current leading-none shrink-0 accordion__icon-arrow no-js:is-hidden" viewBox="0 0 20 20" aria-hidden="true">
+              <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="10" y1="14" x2="3" y2="7" />
+                <line x1="17" y1="7" x2="10" y2="14" />
+              </g>
+            </svg>
+          </button>
+
+          <div class="accordion__panel pt-1.5 lg:pt-2 px-5 lg:px-8 pb-5 lg:pb-8 js-accordion__panel">
+            <div>
+              <p class="leading-normal text-lg">ePaint offers various benefits, including a user-friendly interface for creating and sharing digital artwork, a wide range of drawing tools and features on the virtual canvas and a dashboard.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion__item  js-accordion__item">
+          <button class="accordion__header py-3 lg:py-5 px-5 lg:px-8 js-tab-focus" type="button">
+            <span class="text-lg lg:text-2xl font-semibold">How can I use ePaint?</span>
+
+            <svg class="icon h-[20px] w-[20px] inline-block text-inherit fill-current leading-none shrink-0 accordion__icon-arrow no-js:is-hidden" viewBox="0 0 20 20" aria-hidden="true">
+              <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="10" y1="14" x2="3" y2="7" />
+                <line x1="17" y1="7" x2="10" y2="14" />
+              </g>
+            </svg>
+          </button>
+
+          <div class="accordion__panel pt-1.5 lg:pt-2 px-5 lg:px-8 pb-5 lg:pb-8 js-accordion__panel">
+            <div>
+              <p class="leading-normal mb-4 text-lg">Simply sign up for an account, and you can start drawing immediately using a variety of tools and colors.</p>
+
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion__item  js-accordion__item">
+          <button class="accordion__header py-3 lg:py-5 px-5 lg:px-8 js-tab-focus" type="button">
+            <span class="text-lg lg:text-2xl font-semibold"> Is there a limit to the number of drawings I can create on ePaint?</span>
+
+            <svg class="icon h-[20px] w-[20px] inline-block text-inherit fill-current leading-none shrink-0 accordion__icon-arrow no-js:is-hidden" viewBox="0 0 20 20" aria-hidden="true">
+              <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="10" y1="14" x2="3" y2="7" />
+                <line x1="17" y1="7" x2="10" y2="14" />
+              </g>
+            </svg>
+          </button>
+
+          <div class="accordion__panel pt-1.5 lg:pt-2 px-5 lg:px-8 pb-5 lg:pb-8 js-accordion__panel">
+            <div>
+              <p class="leading-normal text-lg">No, you can create as many drawings as you like on ePaint. Your creativity knows no bounds!</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion__item  js-accordion__item">
+          <button class="accordion__header py-3 lg:py-5 px-5 lg:px-8 js-tab-focus" type="button">
+            <span class="text-lg lg:text-2xl font-semibold">Is ePaint compatible with mobile devices?</span>
+
+            <svg class="icon h-[20px] w-[20px] inline-block text-inherit fill-current leading-none shrink-0 accordion__icon-arrow no-js:is-hidden" viewBox="0 0 20 20" aria-hidden="true">
+              <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="10" y1="14" x2="3" y2="7" />
+                <line x1="17" y1="7" x2="10" y2="14" />
+              </g>
+            </svg>
+          </button>
+
+          <div class="accordion__panel pt-1.5 lg:pt-2 px-5 lg:px-8 pb-5 lg:pb-8 js-accordion__panel">
+            <div>
+              <p class="leading-normal mb-4 text-lg">ePaint is currently not intended for mobile users, as the development in the first few stages primarily focuses on PC systems.</p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+    <div class="mt-[240px]"></div>
+  </div>
+
+
+
+
+    
+
+  <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="/" class="hover:underline">ePaint™</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li>
+            <a href="#About" class="hover:underline me-4 md:me-6">About</a>
+        </li>
+        <li>
+            <a href="#Demo" class="hover:underline me-4 md:me-6">Demo</a>
+        </li>
+        <li>
+            <a href="/login" class="hover:underline me-4 md:me-6">Login</a>
+        </li>
+        <li>
+            <a href="/login" class="hover:underline">Forum</a>
+        </li>
+    </ul>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Scripts -->
+
+  <script src="/accordion.js"></script>
+
+  <script>
+      function initializeCanvas(canvasId, width, height) {
+    const canvas = document.getElementById(canvasId);
+    const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let lineWidth = 5;
+    let color = '#000';
+
+    canvas.width = width;
+    canvas.height = height;
+
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('mouseout', stopDrawing);
+
+
+    function startDrawing(e) {
+      isDrawing = true;
+      draw(e);
+    }
+
+    function draw(e) {
+      if (!isDrawing) return;
+
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width; // Relationship bitmap vs. element for X
+      const scaleY = canvas.height / rect.height; // Relationship bitmap vs. element for Y
+
+      const x = (e.clientX - rect.left) * scaleX;
+      const y = (e.clientY - rect.top) * scaleY;
+
+      ctx.lineWidth = lineWidth;
+      ctx.lineCap = 'round';
+      ctx.strokeStyle = color;
+
+      ctx.lineTo(x, y);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+    }
+
+    function stopDrawing() {
+      isDrawing = false;
+      ctx.beginPath();
+    }
+
+    function updateLineWidth(e) {
+      lineWidth = e.target.value;
+    }
+
+    window.changeColor = function (newColor) {
+      color = newColor;
+    };
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    initializeCanvas('paintCanvas', 1000, 700);
+    function clearCanvas() {
+        const canvas = document.getElementById('paintCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+    document.querySelector('.clearBtn').addEventListener('click', clearCanvas);
+  })
+
+
+
+  </script>
+  
+</body>
+</html>

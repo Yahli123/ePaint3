@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ePaint - Home Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+    .spinner-border {
+        width: 4rem;
+        height: 4rem;
+        border-width: 0.5rem;
+        border-color: white transparent transparent transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    </style>
+</head>
+
+<body class="">
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-cyan-700 to-cyan-800 py-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <h1 class="text-white text-2xl font-bold flex items-center">
+                <i class="fas fa-paint-brush mr-2"></i>ePaint
+            </h1>
+            <!-- Navigation Links -->
+            <div class="flex space-x-6">
+                <a href="/My-Photos/<%= username %>" class="text-white hover:underline">My Photos</a>
+                <a href="/paint/<%= username %>" class="text-white hover:underline">Create Photos</a>
+                <a href="/" class="text-white hover:underline">Exit</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container mx-auto py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 posts-container mb-10">
+            <div id="loadingSpinner" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-75 z-50 hidden">
+                <div class="spinner-border text-white" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            
+            <!-- Add more posts dynamically  -->
+        </div>
+    </div>
+
+    <div class="bottom-menu fixed bottom-0 left-0 w-full bg-gradient-to-r from-cyan-700 to-cyan-800 border-t-2 border-gray-600">
+        <div class="container mx-auto py-4 flex items-center justify-center">
+            <a href="/My-Photos/<%= username %>" class="text-white text-lg font-medium mr-8 hover:underline">My Photos</a>
+            <div class="divider h-6 w-px bg-white mx-8"></div>
+            <a href="/paint/<%= username %>"
+                class="text-white text-lg font-medium ml-8 hover:underline">Create a new Photo</a>
+        </div>
+    </div>
+
+    <script src="/load.js"></script>
+    <script src="/Avatar.js"></script>
+
+    
+</body>
+
+</html>

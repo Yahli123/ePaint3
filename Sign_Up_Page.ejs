@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+    <title>Sign Up Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="h-full bg-gray-100 flex justify-center items-center">
+    <div class="flex w-screen h-full">
+        <div class="w-3/5 flex justify-center items-center bg-gradient-to-r from-white to-cyan-800 rounded-lg">
+            <div class="w-2/3 p-10 rounded-lg shadow-md bg-white">
+                <a href="/" class="text-blue-500 hover:underline">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to Home
+                </a>
+                <p class="text-4xl font-bold text-center mb-8">Sign Up Page</p>
+                <div class="mb-6">
+                    <label for="user_email" class="block text-lg font-medium mb-2">Email:</label>
+                    <input id="user_email" class="Email_field w-full py-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200 transition duration-300"
+                        type="email" placeholder="Type your email" />
+                </div>
+                <div class="mb-6">
+                    <label for="username" class="block text-lg font-medium mb-2">Username:</label>
+                    <input id="username" class="Username_field w-full py-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200 transition duration-300"
+                        type="text" placeholder="Type your username" />
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-lg font-medium mb-2">Password:</label>
+                    <input id="password" class="Password_field w-full py-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200 transition duration-300"
+                        type="password" placeholder="Type your password" />
+                </div>
+
+                <div class="container flex flex-row mt-5 mb-10 justify-center">
+                    <img src="/a1.png" alt="Profile Picture 1" class="profile-pic rounded-full w-16 h-16 mx-2 cursor-pointer" data-code="1">
+                    <img src="/a2.png" alt="Profile Picture 2" class="profile-pic rounded-full w-16 h-16 mx-2 cursor-pointer" data-code="2">
+                    <img src="/a3.png" alt="Profile Picture 3" class="profile-pic rounded-full w-16 h-16 mx-2 cursor-pointer" data-code="3">
+                    <img src="/a4.png" alt="Profile Picture 4" class="profile-pic rounded-full w-16 h-16 mx-2 cursor-pointer" data-code="4">
+                </div>
+
+                <button id="signupBtn"
+                    class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:ring focus:ring-blue-200 transition duration-300 w-full">
+                    Sign Up
+                </button>
+                <div class="mb-2 mt-4 text-center">
+                    <a href="/login" class="text-blue-500 hover:underline">Already have a user? Log in here</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-2/5 bg-cover bg-center"
+            style="background-image: url('https://images.unsplash.com/photo-1537884557178-342a575d7d16?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXJ0aXN0JTIwZHJhd2luZ3xlbnwwfHwwfHx8MA%3D%3D');">
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="/signup.js"></script>
+    <script>
+        class MessageComponent {
+        constructor() {
+            // Create the container element for messages
+            this.container = document.createElement('div');
+            this.container.className = 'message-container fixed bottom-0 right-0 p-4 z-50 bg-transparent text-black';
+            this.container.classList.add('rounded-lg', 'shadow-md');
+            this.container.style.maxWidth = '400px'; // Set maximum width for the container
+            document.body.appendChild(this.container); // Append the container to the body
+        }
+
+        /**
+         * Displays a message in the message container.
+         * @param {string} message - The message to display.
+         * @param {string} [type='info'] - The type of message (info, success, error).
+         */
+        showMessage(message, type = 'info') {
+            // Create a new message element
+            const messageElement = document.createElement('div');
+            messageElement.className = `message bg-gray-700 text-black px-3 py-2 mb-2 rounded-md`;
+
+            // Add specific class based on message type
+            if (type === 'success') {
+                messageElement.classList.add('bg-green-500');
+            } else if (type === 'error') {
+                messageElement.classList.add('bg-red-500');
+            }
+
+            // Set the text content of the message
+            messageElement.textContent = message;
+            this.container.appendChild(messageElement); // Append the message to the container
+
+            // Automatically remove the message after 5 seconds
+            setTimeout(() => {
+                this.container.removeChild(messageElement);
+            }, 5000);
+        }
+    }
+    </script>
+</body>
+
+</html>

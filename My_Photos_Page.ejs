@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Photos | <%= username %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="">
+
+    <header class="flex justify-between items-center p-4 bg-cyan-500">
+        <p class="text-3xl font-bold text-white">ePaint</p>
+        <a href="/feed/<%= username %>"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><i class="fas fa-arrow-left"></i> Return to Feed</button></a>
+    </header>
+
+    <main class="p-6">
+        <h1 class="text-4xl mb-4 text-black">My Photos</h1>
+        <div id="photos-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 photos-container">
+            <!-- Dynamically rendered photos will be inserted here -->
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="/userPhotos.js"></script>
+
+</body>
+
+</html>
